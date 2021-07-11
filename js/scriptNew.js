@@ -91,7 +91,7 @@ class Weather{
                 </div>
                 <div class="data-weather">
                 <div class="icon-description">
-                    <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}.png">
+                    <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">
                     <p>${data.weather[0].main}</p>
                 </div>
                 <div class="temperature-block">
@@ -128,7 +128,7 @@ class Weather{
             this.content.push(`
             <div class="hour-day">
                 <p>${this.formattedTime(data.hourly[i].dt * 1000)}</p>
-                <img src="http://openweathermap.org/img/wn/${data.hourly[i].weather[0].icon}.png">
+                <img src="https://openweathermap.org/img/wn/${data.hourly[i].weather[0].icon}.png">
                 <p>${data.hourly[i].weather[0].main}</p>
                 <p>${this.formattetTemp(data.hourly[i].temp , 'f')}&deg</p>
                 <p>${this.formattetTemp(data.hourly[i].feels_like , 'r')}&deg</p>
@@ -164,7 +164,7 @@ class Weather{
             <div>
             <p>${data.list[i].name}</p>
             <div class="icon-temp">
-                <img src="http://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png">
+                <img src="https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png">
                 <p>${Math.round(data.list[i].main.temp)}&degC</p>
             </div>
             </div>
@@ -194,7 +194,7 @@ class Weather{
                 <div class="days" data-day="${api[i].dt_txt}">
                     <h2>${this.dayOfWeek(api[i].dt_txt)}</h2>
                     <p>${this.dateToYMD(api[i].dt_txt)}</p>
-                    <img src="http://openweathermap.org/img/wn/${api[i].weather[0].icon}.png " class="img">
+                    <img src="https://openweathermap.org/img/wn/${api[i].weather[0].icon}.png " class="img">
                     <p class="temp-5day">${this.formattetTemp(api[i].main.temp, 'f')}&degC</p>
                     <p>${api[i].weather[0].main}</p>
                 </div>
@@ -236,7 +236,7 @@ class Weather{
           this.content.push(`
             <div class="hour-day">
               <p>${this.formattedTime(api[i].dt_txt)}</p>
-              <img src="http://openweathermap.org/img/wn/${api[i].weather[0].icon}.png">
+              <img src="https://openweathermap.org/img/wn/${api[i].weather[0].icon}.png">
               <p>${api[i].weather[0].main}</p>
               <p>${this.formattetTemp(api[i].main.temp , 'f')}&deg</p>
               <p>${this.formattetTemp(api[i].main.feels_like, 'r')}&deg</p>

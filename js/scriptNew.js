@@ -20,7 +20,7 @@ class Weather{
             lon: ''
         };
         this.url = [
-            'http://api.openweathermap.org/data/2.5/weather?q=Luhansk&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d'
+            'https://api.openweathermap.org/data/2.5/weather?q=Luhansk&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d'
         ];
         this.currentDate = this.formattedDate(new Date());
         this.content = [];
@@ -34,12 +34,12 @@ class Weather{
     }
     getUrl(parUrl){
         let url;
-        if(parUrl == 'city') url = 'http://api.openweathermap.org/data/2.5/weather?q=Luhansk&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d';
-        if(parUrl == 'inp') url = `http://api.openweathermap.org/data/2.5/weather?q=${this.searchInput.value}&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d`;
-        if(parUrl == 'weatherLoc') url = `http://api.openweathermap.org/data/2.5/weather?lat=${this.location.lat}&lon=${this.location.lon}&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d`;
+        if(parUrl == 'city') url = 'https://api.openweathermap.org/data/2.5/weather?q=Luhansk&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d';
+        if(parUrl == 'inp') url = `https://api.openweathermap.org/data/2.5/weather?q=${this.searchInput.value}&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d`;
+        if(parUrl == 'weatherLoc') url = `https://api.openweathermap.org/data/2.5/weather?lat=${this.location.lat}&lon=${this.location.lon}&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d`;
         if(parUrl == 'onecall') url = `https://api.openweathermap.org/data/2.5/onecall?lat=${this.location.lat}&lon=${this.location.lon}&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d`;
         if(parUrl == 'findLoc') url = `https://api.openweathermap.org/data/2.5/find?lat=${this.location.lat}&lon=${this.location.lon}&cnt=6&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d`;
-        if(parUrl == 'forecast') url = `http://api.openweathermap.org/data/2.5/forecast?q=${this.searchInput.value}&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d`;
+        if(parUrl == 'forecast') url = `https://api.openweathermap.org/data/2.5/forecast?q=${this.searchInput.value}&units=metric&appid=dcf132fe522672ad08dcda4ab5ff268d`;
         return url;
     }
     async fetchAsync(url){
